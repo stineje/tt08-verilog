@@ -19,7 +19,7 @@ async def test_project(dut):
     dut.ena.value = 1
     dut.uio_in.value = 0
     dut.rst_n.value = 0
-    dut.ui_in.value = 20
+    dut.ui_in.value = 21
     
     await ClockCycles(dut.clk, 1)
     dut.rst_n.value = 1
