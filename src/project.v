@@ -39,9 +39,9 @@ module tt_um_example (
         always @(*) begin
         if (~rst_n)
             next = 8'h0;
-        else if (ui_in[0] == 1'b1)
+        else if (ui_in[0] == 1'b0)
             next = uo_out + 8'h1;    
-        else if (ui_in[1] == 1'b1)
+        else if (ui_in[0] == 1'b1)
             next = uo_out;    
     end
 
