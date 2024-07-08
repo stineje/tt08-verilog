@@ -26,7 +26,10 @@ module tt_um_example (
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
   always @(posedge clk) 
-     counter_out <= ui_in + 1;    
+      if (!rst_n)
+              counter_out <= ui_in;
+      else
+        counter_out <= counter_out + 1;    
 
 assign uo_out = counter_out;
 
