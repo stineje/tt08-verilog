@@ -29,7 +29,7 @@ module tt_um_example (
       if (!rst_n)
               counter_out <= ui_in;
       else
-        counter_out <= counter_out + 1;    
+        counter_out <= counter_out + 8'h1;    
 
 assign uo_out = counter_out;
 
