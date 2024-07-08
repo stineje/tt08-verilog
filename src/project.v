@@ -23,7 +23,7 @@ module tt_um_example (
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, rst_n, 1'b0};
-  assign uio_out = ui_in;
+  assign uo_out = ui_in;
 
 
 endmodule
