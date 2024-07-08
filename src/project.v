@@ -17,6 +17,7 @@ module tt_um_example (
 );
 
   // All output pins must be assigned. If not used, assign to 0.
+    reg [7:0] counter_out;
   
   assign uio_out = 0;
   assign uio_oe  = 0;
@@ -25,7 +26,8 @@ module tt_um_example (
   wire _unused = &{ena, clk, rst_n, 1'b0};
 
   always @(posedge clk) 
-     uo_out <= ui_in;    
-  
+     counter_out <= ui_in;    
+
+assign uo_out = counter_out;
 
 endmodule
