@@ -19,6 +19,9 @@ module tt_um_example (
   // All output pins must be assigned. If not used, assign to 0.
     reg [7:0] counter_out;
     reg [7:0] next;
+
+    // ui_in[0] = start
+    // ui_in[1] = stop
   
   assign uio_out = 0;
   assign uio_oe  = 0;
@@ -36,8 +39,10 @@ module tt_um_example (
         always @(*) begin
         if (~rst_n)
             next = 8'h0;
-        else
+        else if (ui_in[0] == 1'b1)
             next = uo_out + 8'h1;    
+        else if (ui_in[1] = 1'b1)
+            next = uo_out;    
     end
 
 endmodule
