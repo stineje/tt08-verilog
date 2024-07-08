@@ -26,6 +26,7 @@ module tt_um_example (
     // Counter flip flop
     always @(posedge clk) begin
         uo_out <= next;
+    end    
 
   // List all unused inputs to prevent warnings
   wire _unused = &{ena, clk, 1'b0};
