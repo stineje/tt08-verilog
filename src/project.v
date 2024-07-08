@@ -32,7 +32,7 @@ module tt_um_example (
 
     always @(*) begin
         if (~rst_n)
-            next <= 8'h0;
+            next = 8'h0;
         else
             next = uo_out + 8'h1;    
     end
