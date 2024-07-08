@@ -41,7 +41,7 @@ module tt_um_example (
             next = 8'h0;
         else if (ui_in[0] == 1'b1)
             next = uo_out + 8'h1;    
-        else if (ui_in[1] = 1'b1)
+        else if (ui_in[1] == 1'b1)
             next = uo_out;    
     end
 
