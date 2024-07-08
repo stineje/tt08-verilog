@@ -38,7 +38,7 @@ module tt_um_example (
     assign uo_out = counter_out;
 
   // List all unused inputs to prevent warnings
-    wire _unused = &{ena, temp1, temp2, clk, 1'b0};
+    wire _unused = &{ena, temp1, temp2, clk};
 
         always @(*) begin
         if (~rst_n)
